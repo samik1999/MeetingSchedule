@@ -7,42 +7,31 @@ Schedule a Meeting: Create meetings by specifying the date, time, room, and part
 Collision Detection: Automatically checks for scheduling conflicts for rooms and participants.
 Multiple Participant Support: Schedule meetings with multiple participants.
 Room Booking: Book specific rooms for meetings.
+
 Getting Started
 Prerequisites
-Python 3.x
+Python 3.9
 Flask
 Installation
+
 Clone the repository:
+git clone https://github.com/samik1999/MeetingSchedule
 
-bash
-Copy code
-git clone https://github.com/samik1999/meeting-scheduler.git
-cd meeting-scheduler
 Set up a virtual environment:
-
-bash
-Copy code
 python3 -m venv venv
 source venv/bin/activate
+
 Install dependencies:
+pip3 install Flask
 
-bash
-Copy code
-pip install Flask
 Set up the database:
-
-bash
-Copy code
 sqlite3 scheduler.db < schema.sql
-Run the Flask application:
 
-bash
-Copy code
-python app.py
-Usage
+Run the Flask application:
+Run a Command 
+python3 app.py
+
 Schedule a Meeting:
-bash
-Copy code
 curl -X POST http://localhost:5000/schedule \
 -H "Content-Type: application/json" \
 -d '{
@@ -53,6 +42,7 @@ curl -X POST http://localhost:5000/schedule \
   "creator_id": 1,
   "participants": [2, 3]
 }'
+
 Database Schema
 Users: Stores user information.
 Rooms: Stores information about available meeting rooms.
